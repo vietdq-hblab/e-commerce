@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"npx tsc --noEmit 2>&1\",\"description\":\"Type-check the TypeScript project\"}",
+  "error": "Exit code 2\nsrc/routes/auth.ts(38,9): error TS2741: Property 'createdAt' is missing in type '{ id: string; email: string; name: string; passwordHash: string; passwordSalt: string; }' but required in type 'User'.\nsrc/routes/auth.ts(47,43): error TS2345: Argument of type 'User' is not assignable to parameter of type 'string'.\nsrc/routes/auth.ts(62,47): error TS2339: Property 'passwordHash' does not exist on type 'string'.\nsrc/routes/auth.ts(62,66): error TS2339: Property 'passwordSalt' does not ex...",
+  "timestamp": "2026-04-16T07:16:35.040Z",
+  "retry_count": 1
+}
