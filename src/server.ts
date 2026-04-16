@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 import authRouter from './routes/auth';
 import productsRouter from './routes/products';
 import cartRouter from './routes/cart';
@@ -12,6 +13,8 @@ app.use('/auth', authRouter);
 app.use('/products', productsRouter);
 app.use('/cart', cartRouter);
 app.use('/orders', ordersRouter);
+
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.use((_req, res) => res.status(404).json({ error: 'Not found' }));
 
